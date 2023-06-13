@@ -91,21 +91,15 @@ obs.observe(sectionHeroEl);
     "finansowej",
     "ubezpieczeniowej",
   ];
-  let i = 0;
+  let i = 1;
   const selected = document.querySelector("#words");
-  setInterval(fadeOut, 700);
-  function fadeOut() {
-    selected.classList.remove("fade");
-  }
-
-  setInterval(changeText, 1500);
-  function changeText() {
-    selected.textContent = words[i];
-    i = (i + 1) % words.length;
-  }
-
-  setInterval(fadeIn, 1200);
-  function fadeIn() {
-    selected.classList.add("fade");
-  }
+  setInterval(()=> {
+    if(selected.style.opacity === '0'){
+      selected.style.opacity = 1;
+      selected.textContent = words[i];
+      i = (i + 1) % words.length;
+    }else{
+      selected.style.opacity = 0;
+    }
+  }, 2000)
 })();
