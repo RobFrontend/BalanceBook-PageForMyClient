@@ -68,6 +68,7 @@ obs.observe(sectionHeroEl);
     "e-commerce",
     "dropshipping",
     "zdrowotnej",
+    "praca",
     "beauty",
     "finansowej",
     "ubezpieczeniowej",
