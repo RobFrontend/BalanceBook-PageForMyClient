@@ -61,6 +61,25 @@ obs.observe(sectionHeroEl);
 ///////////////////////////////////////////////////////////
 // Animated jobs
 
+// (() => {
+//   const words = [
+//     "handlowej",
+//     "usługowej",
+//     "e-commerce",
+//     "dropshipping",
+//     "zdrowotnej",
+//     "beauty",
+//     "finansowej",
+//     "ubezpieczeniowej",
+//   ];
+//   let i = 0;
+//   const selected = document.querySelector("#words");
+//   setInterval(() => {
+//     selected.textContent = words[i];
+//     i = (i + 1) % words.length;
+//   }, 1500);
+// })();
+
 (() => {
   const words = [
     "handlowej",
@@ -68,15 +87,25 @@ obs.observe(sectionHeroEl);
     "e-commerce",
     "dropshipping",
     "zdrowotnej",
-    "praca",
     "beauty",
     "finansowej",
     "ubezpieczeniowej",
   ];
   let i = 0;
   const selected = document.querySelector("#words");
-  setInterval(() => {
+  setInterval(fadeOut, 700);
+  function fadeOut() {
+    selected.classList.remove("fade");
+  }
+
+  setInterval(changeText, 1500);
+  function changeText() {
     selected.textContent = words[i];
     i = (i + 1) % words.length;
-  }, 1500);
+  }
+
+  setInterval(fadeIn, 1200);
+  function fadeIn() {
+    selected.classList.add("fade");
+  }
 })();
