@@ -1,8 +1,8 @@
 //////////////////////////////////////////////////
 //// Aktualny rok
-// const yearEl = document.querySelector(".year");
-// const currentYear = new Date().getFullYear();
-// yearEl.textContent = currentYear;
+const yearEl = document.querySelector(".year");
+const currentYear = new Date().getFullYear();
+yearEl.textContent = currentYear;
 /////////////////////////////////////////////////
 // Mobilna nawigacja menu
 
@@ -53,30 +53,27 @@ const obs = new IntersectionObserver(
     // In the viewport
     root: null,
     threshold: 0,
-    rootMargin: "-90px",
+    rootMargin: "-80px",
   }
 );
 obs.observe(sectionHeroEl);
 
 ///////////////////////////////////////////////////////////
-// Animated jobs
+// Fixing flexbox gap property missing in some Safari versions
+function checkFlexGap() {
+  var flex = document.createElement("div");
+  flex.style.display = "flex";
+  flex.style.flexDirection = "column";
+  flex.style.rowGap = "1px";
 
-(() => {
-  const words = [
-    "handlowej",
-    "usługowej",
-    "e-commerce",
-    "dropshipping",
-    "zdrowotnej",
-    "praca",
-    "beauty",
-    "finansowej",
-    "ubezpieczeniowej",
-  ];
-  let i = 0;
-  const selected = document.querySelector("#words");
-  setInterval(() => {
-    selected.textContent = words[i];
-    i = (i + 1) % words.length;
-  }, 1500);
-})();
+  flex.appendChild(document.createElement("div"));
+  flex.appendChild(document.createElement("div"));
+
+  document.body.appendChild(flex);
+  var isSupported = flex.scrollHeight === 1;
+  flex.parentNode.removeChild(flex);
+  console.log(isSupported);
+
+  if (!isSupported) document.body.classList.add("no-flexbox-gap");
+}
+checkFlexGap();

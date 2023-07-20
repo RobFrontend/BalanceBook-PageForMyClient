@@ -1,3 +1,77 @@
+/* ******************** */
+/* BELOW 1440px (Smaller desktops) */
+@media (max-width: 90em) {
+  .container {
+    max-width: 120rem;
+  }
+  .main-nav-list {
+    gap: 1.2rem;
+  }
+}
+
+/* ******************** */
+/* BELOW 1340px (Smaller desktops) */
+
+@media (max-width: 84em) {
+  .container {
+    max-width: 120rem;
+  }
+
+  .header {
+    padding: 1.6rem 2.4rem;
+  }
+  .main-nav-list {
+    gap: 1.6rem;
+  }
+
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+}
+
+/* ******************** */
+/* BELOW 1200px (Landscape Tablets) */
+@media (max-width: 76em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .main-nav-list {
+    gap: 0.8rem;
+  }
+  .main-nav-link--offer,
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    padding: 1.2rem 1.2rem;
+  }
+
+  .hero {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .ryczalt-boxes-1 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .dlaczegomy-text-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dlaczegomy-box5-ind,
+  .dlaczegomy-box6-ind,
+  .dlaczegomy-box7-ind {
+    width: 100%;
+  }
+  .dlaczegomy-box6-ind {
+    grid-column: 2/3;
+  }
+  .dlaczegomy-box7-ind {
+    width: 50%;
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+}
+
+/* ******************** */
+/* BELOW 944px (Tablets) */
 @media (max-width: 59em) {
   html {
     /* 8px /16px = 50% */
@@ -10,17 +84,37 @@
     gap: 6.4rem;
   }
 
-  .hero-text-box,
-  .hero-image-box {
+  .hero-text-box {
     text-align: center;
+    align-items: center;
+  }
+
+  .hero-img-box {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
 
   .hero-img {
     width: 60%;
   }
+  .hero-img-3 {
+    grid-column: 3 / 4;
+  }
+  .hero-img-5 {
+    grid-column: 3 / 4;
+    grid-row: 2;
+  }
   .btn-mobile-nav {
     display: block;
     z-index: 1000;
+  }
+
+  .promocje-box {
+    flex-direction: column;
+  }
+  .ryczalt-boxes-1,
+  .korzysci-boxes {
+    grid-template-columns: 1fr 1fr;
   }
 
   .main-nav {
@@ -76,5 +170,129 @@
   .main-nav-link:link,
   .main-nav-link:visited {
     font-size: 3rem;
+  }
+}
+
+/* ******************** */
+/* BELOW 710px (SMALLER Tablets) */
+@media (max-width: 45em) {
+  .uslugi-grid {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+  .ryczalt-boxes-2,
+  .dlaczegomy-text-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .oferta-box,
+  .twojaksiegowa-box,
+  .konsultacja-boxes,
+  .kontakt-boxes,
+  .promocje-boxes,
+  .naszaoferta-boxes,
+  .zalozfirme-box {
+    grid-template-columns: 1fr;
+  }
+
+  .zalofrime-img-box {
+    align-items: center;
+    flex-direction: row;
+  }
+  .zalozfirme-img-overflow {
+    width: 50%;
+    height: 100%;
+  }
+
+  .zaciebie-img-box {
+    grid-row: 1;
+    text-align: center;
+  }
+  .zaciebie-img-box:hover,
+  .oferta-img-box:hover {
+    border-radius: 70% 0 70% 0;
+  }
+  .naszaoferta-ul {
+    margin-left: 5%;
+  }
+}
+
+/* ******************** */
+/* BELOW 544px (PHONES) */
+
+@media (max-width: 34em) {
+  .main-nav-contact-box {
+    padding-left: 2.4rem;
+  }
+
+  .logo {
+    width: 20%;
+  }
+
+  .uslugi-text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .dlaczegomy-text-box {
+    justify-content: space-between;
+  }
+  .heading-tertiary-dlaczegomy {
+    text-align: center;
+  }
+  .uslugi-flex {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 6rem;
+  }
+  .cta-form,
+  .ryczalt-boxes-1,
+  .ryczalt-boxes-2,
+  .ryczalt-boxes-3,
+  .dlaczegomy-text-container,
+  .oferta-box,
+  .korzysci-boxes {
+    grid-template-columns: 1fr;
+  }
+
+  .dlaczegomy-box6-ind {
+    grid-column: 1/-1;
+  }
+  .dlaczegomy-box7-ind {
+    width: 100%;
+  }
+
+  .dlaczegomy-box-center {
+    grid-column: 1/-1;
+    width: 100%;
+  }
+
+  .weronika-img-box {
+    text-align: center;
+    margin-bottom: 2.4rem;
+  }
+
+  .zalozfirme-img-overflow {
+    width: 50%;
+    height: 100%;
+  }
+
+  .grid--footer {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+  .logo-col {
+    grid-column: 1 / -1;
+    margin-bottom: 3.2rem;
+  }
+
+  .menu-col,
+  .kontakt-col {
+    grid-row: 2;
+  }
+
+  .footer-heading {
+    margin-bottom: 1.2rem;
   }
 }
