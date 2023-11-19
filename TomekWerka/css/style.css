@@ -37,7 +37,7 @@
 .main-nav-link:link,
 .main-nav-link:visited {
   text-transform: uppercase;
-  padding: 1.2rem 2.4rem;
+  padding: 1.2rem 1.2rem;
   border-radius: 5px;
   transition: all 0.3s;
   cursor: pointer;
@@ -146,12 +146,15 @@
   display: grid;
   grid-template-columns: 55fr 45fr;
   gap: 4.8rem;
+  height: 55vh;
 }
 
 .hero-text-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  grid-column: 1 / -1;
+  align-items: center;
 }
 .hero-btn-box {
   display: flex;
@@ -183,38 +186,10 @@
 .btn-price {
   background: rgba(247, 250, 253, 0.5);
   color: #333;
+  line-height: 1.05;
 }
 .btn-price:hover {
   background: rgba(247, 250, 253, 0.6);
-}
-
-.hero-img-box {
-  gap: 0.8rem;
-  grid-template-rows: repeat(3, 1fr);
-}
-
-.hero-img-overflow {
-  border-radius: 2px;
-  overflow: hidden;
-  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.2));
-}
-
-.logo-img-hero-box {
-  align-self: center;
-  justify-self: center;
-  filter: blur(0.08rem) brightness(0.8)
-    drop-shadow(4px 2px 2px rgba(255, 255, 255, 0.2));
-  opacity: 0.9;
-  transition: all 0.6s;
-}
-.logo-img-hero-box:hover {
-  transform: scale(1.2);
-  opacity: 1;
-  filter: brightness(1) drop-shadow(4px 2px 2px rgba(255, 255, 255, 0.4));
-}
-
-.logo-img-hero {
-  width: 100%;
 }
 
 .hero-p {
@@ -259,6 +234,9 @@
 }
 
 /* DLACZEGO MY SECTION */
+.section-polityka-1,
+.section-obalancebook,
+.section-organizacyjne,
 .section-ksiega,
 .section-kontakt,
 .section-ryczalt,
@@ -310,10 +288,20 @@
   border-radius: 15px 15px 0 0;
   transform: translateY(-1.2rem);
   .dlaczegomy-icon {
+    animation: hover-animation 1s ease-in infinite alternate;
+  }
+}
+@keyframes hover-animation {
+  from {
+    transform: scale(1) rotate(0deg);
+    color: #555;
+  }
+  to {
     transform: scale(1.2) rotate(20deg);
     color: #333;
   }
 }
+
 .dlaczegomy-box3 {
   background: linear-gradient(
     to bottom,
@@ -449,6 +437,17 @@
   width: 4.8rem;
   padding-bottom: 2.4rem;
   color: #555;
+  animation: y-axis-animation 1.5s ease-in-out 0s infinite alternate;
+}
+@keyframes y-axis-animation {
+  from {
+    transform: rotate(0deg) rotateX(-20deg);
+    color: #333;
+  }
+  to {
+    transform: rotate(2deg) rotateX(20deg);
+    color: #555;
+  }
 }
 
 .dlaczegomy-p {
@@ -459,6 +458,9 @@
 }
 
 /* USŁUGI SECTION */
+.section-polityka-2,
+.section-ouslugachksiegowych,
+.section-rozpoczeciewspolpracy,
 .section-ksiega-vat,
 .section-ryczalt-vat,
 .section-konsultacja,
@@ -572,6 +574,7 @@
 }
 
 /* SKONTAKTUJ SECTION */
+.section-ouslugachkadrowych,
 .section-kadry,
 .section-promocje,
 .section-skontaktuj {
@@ -671,7 +674,7 @@
 }
 
 .footer {
-  padding: 12.8rem 0;
+  padding: 12.8rem 0 3.2rem 0;
   border-top: 1px solid #eee;
   background: linear-gradient(
     to bottom left,
@@ -738,6 +741,34 @@
   height: 1.6rem;
   width: 1.6rem;
   color: #094276;
+}
+
+.div-copyright {
+  padding-top: 9.6rem;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #083b6a;
+  opacity: 0.5;
+  line-height: 1.3;
+}
+
+.tag {
+  display: none;
+}
+
+.a-tag:link,
+.a-tag:visited {
+  text-decoration: none;
+  color: #083b6a;
+  transition: all 0.3s;
+}
+.a-tag:hover {
+  color: #3a6791;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
 }
 
 /* ************************************************************* */
@@ -1462,4 +1493,77 @@
 
 .cta-form input::placeholder {
   color: #aaa;
+}
+
+/* PYTANIA I ODPOWIEDZI */
+
+.pytania-boxes {
+  margin-bottom: 6.4rem;
+  padding: 3.2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.02);
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s;
+}
+
+.pytania-boxes:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+  background-color: rgba(203, 223, 242, 0.5);
+}
+
+.pytania-ul {
+  padding: 1.8rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  list-style: square;
+  list-style-position: inside;
+}
+
+.pytania-span {
+  color: #083b6a;
+  font-weight: 600;
+}
+
+.pytania-p {
+  margin-bottom: 1.2rem;
+}
+
+.pytania-link-box {
+  margin-bottom: 6.4rem;
+}
+
+.pytania-ol {
+  font-size: 1.8rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  list-style-position: inside;
+  line-height: 1.05;
+}
+/* POLICY */
+/* ////////////////////// */
+.hero-polityka {
+  padding-top: 9.6rem;
+  text-align: center;
+}
+
+.div-polityka {
+  margin-bottom: 4.8rem;
+}
+
+.p-polityka {
+  font-weight: 500;
+  line-height: 1.2;
+}
+.section-polityka-1 {
+  padding-top: 9.6rem;
+  padding-bottom: 4.8rem;
+}
+
+.polityka-marg2,
+.polityka-marg {
+  margin-left: 2.4rem;
 }

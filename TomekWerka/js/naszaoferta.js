@@ -1,38 +1,41 @@
-const btn = document.querySelector(".btn-naszaoferta");
-const naszaofertaP = document.querySelector(".naszaoferta-text-box");
+// NASZA OFERTA HIDDEN WINDOWS //
 
-const openNaszaofertaP = function () {
-  naszaofertaP.classList.toggle("hidden");
+const btnKsiegBox = document.querySelector(".btn-naszaoferta");
+const naszaofertaKsiegBox = document.querySelector(".naszaoferta-text-box");
+
+const openNaszaofertaPKsieg = function () {
+  naszaofertaKsiegBox.classList.toggle("hidden");
 };
 
-btn.addEventListener("click", openNaszaofertaP);
+btnKsiegBox.addEventListener("click", openNaszaofertaPKsieg);
 
 // *************************
-const btn2 = document.querySelector(".btn-naszaoferta2");
-const naszaofertaP2 = document.querySelector(".naszaoferta-text-box2");
+const btnKadryBox = document.querySelector(".btn-naszaoferta2");
+const naszaofertaKadryBox = document.querySelector(".naszaoferta-text-box2");
 
-const openNaszaofertaP2 = function () {
-  naszaofertaP2.classList.toggle("hidden");
+const openNaszaofertaPKadry = function () {
+  naszaofertaKadryBox.classList.toggle("hidden");
 };
 
-btn2.addEventListener("click", openNaszaofertaP2);
+btnKadryBox.addEventListener("click", openNaszaofertaPKadry);
 
 // *************************
-const btn3 = document.querySelector(".btn-naszaoferta3");
-const naszaofertaP3 = document.querySelector(".naszaoferta-text-box3");
+const btnKonsuBox = document.querySelector(".btn-naszaoferta3");
+const naszaofertaKonsuBox = document.querySelector(".naszaoferta-text-box3");
 
-const openNaszaofertaP3 = function () {
-  naszaofertaP3.classList.toggle("hidden");
+const openNaszaofertaPKonsu = function () {
+  naszaofertaKonsuBox.classList.toggle("hidden");
 };
 
-btn3.addEventListener("click", openNaszaofertaP3);
+btnKonsuBox.addEventListener("click", openNaszaofertaPKonsu);
 
 // *************************
-const btn4 = document.querySelector(".btn-naszaoferta4");
-const naszaofertaP4 = document.querySelector(".naszaoferta-text-box4");
+const btnZakBox = document.querySelector(".btn-naszaoferta4");
+const naszaofertaZakBox = document.querySelector(".naszaoferta-text-box4");
 
-const openNaszaofertaP4 = function () {
-  naszaofertaP4.classList.toggle("hidden");
+const openNaszaofertaPZak = function () {
+  naszaofertaZakBox.classList.toggle("hidden");
 };
 
-btn4.addEventListener("click", openNaszaofertaP4);
+btnZakBox.addEventListener("click", openNaszaofertaPZak);
+/////////
